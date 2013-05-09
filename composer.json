@@ -1,0 +1,22 @@
+{
+    "name": "kevbaldwyn/properties-trait",
+    "description": "",
+    "authors": [
+        {
+            "name": "Kev Baldwyn",
+            "email": "kevin@purepixel.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+    },
+    "autoload": {
+        "classmap": [
+            "src/KevBaldwyn"
+        ],
+        "psr-0": {
+            "KevBaldwyn\\Traits": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
