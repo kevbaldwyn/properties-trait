@@ -20,11 +20,18 @@ trait Properties {
 		if(array_key_exists($property, $this->_properties)) {
 			return $this->_properties[$property];
 		}
+		
+		return parent::__get($property);
+		
 	}
 	
 	
 	public function __set($property, $value) {
-		$this->_properties[$property] = $value;
+		if(array_key_exists($property, $this->_properties)) {
+			$this->_properties[$property] = $value;
+		}
+		
+		return parent::__set($property, $value);
 	}
 	
 	
