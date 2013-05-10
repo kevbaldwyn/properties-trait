@@ -17,7 +17,7 @@ trait Properties {
 	
 	
 	public function __get($property) {
-		if(array_key_exists($property, $this->_properties)) {
+		if(array_key_exists($property, $this->_defaultProperties())) {
 			return $this->_properties[$property];
 		}
 		
@@ -27,7 +27,7 @@ trait Properties {
 	
 	
 	public function __set($property, $value) {
-		if(array_key_exists($property, $this->_properties)) {
+		if(array_key_exists($property, $this->_defaultProperties())) {
 			$this->_properties[$property] = $value;
 		}
 		
